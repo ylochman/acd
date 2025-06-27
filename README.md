@@ -11,7 +11,7 @@ A C++ implementation with python bindings will be released soon.
 
 The **pseudo-code** of ACD algorithm is:
 ```python
-R ← random_rotations(n)            # R is nx3x3
+R ← initialize_rotations(n)        # R is nx3x3
 N ← construct_cost_matrix(Rrel, H) # N is nxnx3x3
                                    # N[i,j] = 
                                    #    (tr(H_ij)/2 I − H_ij) @ Rrel_ij
