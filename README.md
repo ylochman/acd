@@ -43,3 +43,13 @@ If you found this work useful, consider citing:
 }
 ```
 
+The anisotropic formulation used in this work was proposed in:
+```bibtex
+@article{olsson2025certifiably,
+    author    = {Olsson, Carl and Lochman, Yaroslava and Malmport, Johan and Zach, Christopher},
+    title     = {Certifiably Optimal Anisotropic Rotation Averaging},
+    journal   = {arXiv preprint arXiv:2503.07353},
+    year      = {2025},
+}
+```
+
