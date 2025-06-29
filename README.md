@@ -11,7 +11,7 @@ A C++ implementation with python bindings will be released soon.
 
 The **pseudo-code** of ACD algorithm is:
 ```python
-R ← random_rotations(n)            # R is nx3x3
+R ← initialize_rotations(n)        # R is nx3x3
 N ← construct_cost_matrix(Rrel, H) # N is nxnx3x3
                                    # N[i,j] = 
                                    #    (tr(H_ij)/2 I − H_ij) @ Rrel_ij
@@ -39,6 +39,16 @@ If you found this work useful, consider citing:
     author    = {Lochman, Yaroslava and Olsson, Carl and Zach, Christopher},
     title     = {Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent},
     journal   = {arXiv preprint arXiv:2506.01940},
+    year      = {2025},
+}
+```
+
+The anisotropic formulation used in this work was proposed in:
+```bibtex
+@article{olsson2025certifiably,
+    author    = {Olsson, Carl and Lochman, Yaroslava and Malmport, Johan and Zach, Christopher},
+    title     = {Certifiably Optimal Anisotropic Rotation Averaging},
+    journal   = {arXiv preprint arXiv:2503.07353},
     year      = {2025},
 }
 ```
