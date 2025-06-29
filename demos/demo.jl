@@ -23,14 +23,15 @@ end
 
 display("Synthetic dataset:")
 n = 2000 # number of cameras
-p = 0.1  # proportion of observed relative measurements
+p = 0.1  # proportion of observed relative rotations
+p_outlier = 0.5  # proportion of outlying relative rotations
 min_H_eigval = 1  # set to Inf for noiseless data
 max_H_eigval = 100 # set to Inf for noiseless data
-R_true, Rrel, H = generate_data(n, p; min_H_eigval=min_H_eigval, max_H_eigval=max_H_eigval);
+R_true, Rrel, H = generate_data(n, p; min_H_eigval=min_H_eigval, max_H_eigval=max_H_eigval, p_outlier=p_outlier);
 run_and_eval_acd(R_true, Rrel, H; anisotropic_cost=false)
 run_and_eval_acd(R_true, Rrel, H; anisotropic_cost=true)
 
 display("LU Sphinx dataset:")
-R_true, Rrel, H = read_matlab_data("./data/lu_sphinx.mat");
+R_true, Rrel, H = read_matlab_data("../data/lu_sphinx.mat");
 run_and_eval_acd(R_true, Rrel, H; anisotropic_cost=false)
 run_and_eval_acd(R_true, Rrel, H; anisotropic_cost=true)
