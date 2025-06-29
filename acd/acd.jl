@@ -81,7 +81,7 @@ function construct_cost_matrix(Rrel, H; anisotropic=true)
                     H_ij = H[i,j,:,:]
                     M_ij = tr(H_ij) / 2 * I3x3 - H_ij
                     cost_matrix[i,j,:,:] .= M_ij * Rrel[i,j,:,:]
-                    constant_term += tr(M_ij)
+                    constant_term += 2 * tr(M_ij)
                 else
                     cost_matrix[i,j,:,:] .= Rrel[i,j,:,:]
                     constant_term += 6
