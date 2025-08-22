@@ -1,6 +1,6 @@
 # ACD: Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent
 
-Julia code for the paper [Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent](https://ylochman.github.io/acd) that proposes a fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporatess into the optimization of absolute rotations.
+Julia code for the paper [Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent](https://ylochman.github.io/acd) that proposes a fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporated into the optimization of absolute rotations.
 
 A C++ implementation with python bindings will be released soon.
 
