@@ -6,8 +6,8 @@ A fast solver for [anisotropic rotation averaging](https://ylochman.github.io/an
 
 
 The code is available in:
-* [Julia](./julia/README.md)
-* [python/C++](./python/README.md)
+* [Julia](./julia)
+* [python/C++](./python)
 
 ## Algorithm details
 **Input**: relative rotations `Rrel` (`Rrel_ij ≈ R_j @ R_i.T`), corresponding Hessians `H`.
