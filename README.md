@@ -2,7 +2,8 @@
 
 [[project page](https://ylochman.github.io/acd)] | [[paper](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_516/paper.pdf)]
 
-A fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporatess into the optimization of absolute rotations.
+A fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporated into the optimization of absolute rotations.
+
 
 The code is available in:
 * [Julia](./julia/README.md)
