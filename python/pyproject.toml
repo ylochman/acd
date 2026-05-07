@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.25", "pybind11>=2.10", "setuptools>=68"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acd"
+version = "0.1.0"
+description = "ACD: Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "scipy"
+]
+license = { text = "MIT" }
+authors = [{ name = "Yaroslava Lochman" }]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/acd"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/README.md",
+  "/pyproject.toml",
+  "/src/acd",
+]
+
+[tool.hatch.build.hooks.custom]
+path = "build_hook.py"

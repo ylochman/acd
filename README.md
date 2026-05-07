@@ -1,8 +1,12 @@
 # ACD: Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent
 
-Julia code for the paper [Fast and Robust Rotation Averaging with Anisotropic Coordinate Descent](https://ylochman.github.io/acd) that proposes a fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporatess into the optimization of absolute rotations.
+[[project page](https://ylochman.github.io/acd)] | [[paper](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_516/paper.pdf)]
 
-A C++ implementation with python bindings will be released soon.
+A fast solver for [anisotropic rotation averaging](https://ylochman.github.io/anisotropic-ra) where the uncertainties of optimized two-view relative rotations are incorporatess into the optimization of absolute rotations.
+
+The code is available in:
+* [Julia](./julia/README.md)
+* [python/C++](./python/README.md)
 
 ## Algorithm details
 **Input**: relative rotations `Rrel` (`Rrel_ij ≈ R_j @ R_i.T`), corresponding Hessians `H`.
@@ -23,14 +27,6 @@ for iter in range(max_iter):
     if converged:
         break
 ```
-
-## Running the code
-The code is tested on Julia 1.11.5.
-The required julia packages are `LinearAlgebra`, `StatsBase`, `MAT`, and can be installed by running [`requirements.jl`](./requirements.jl).
-
-The solver code is in [`acd.jl`](./acd/acd.jl).
-
-A demo example is in [`demo.jl`](./demos/demo.jl).
 
 ## Citation
 If you found this work useful, consider citing:
