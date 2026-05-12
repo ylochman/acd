@@ -7,12 +7,12 @@ function run_and_eval_acd(R_true, Rrel, H; anisotropic_cost=true)
     Args:
         anisotropic_cost -- if true, uses the anisotropic cost
     """
-    n = size(R_true, 1)
     R_est, stat, stime, obj_val = acd(Rrel, H; anisotropic_cost=anisotropic_cost, print_frequency=10)
 
     # Evaluate the solution
     R_est = align_rotations(R_est, R_true)
     fro_err = sqrt(sum((R_est - R_true).^2))
+    n = size(R_true, 1)
     angles = zeros(n)
     for i=1:n
         angles[i] = norm(R2w(R_true[i,:,:] * R_est[i,:,:]')) / pi * 180

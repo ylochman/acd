@@ -9,12 +9,12 @@ def run_and_eval_acd(R_true, Rrel, H, anisotropic_cost=True):
     Args:
         anisotropic_cost -- if true, uses the anisotropic cost
     """
-    n = R_true.shape[0]
     R_est, stat, stime, obj_val = acd(
         Rrel, H, anisotropic_cost=anisotropic_cost, print_frequency=10
     )
 
     # Evaluate the solution
+    n = R_true.shape[0]
     R_est = align_rotations(R_est, R_true)
     fro_err = np.sqrt(np.sum((R_est - R_true) ** 2))
     angles = np.zeros(n)
