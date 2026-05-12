@@ -64,13 +64,4 @@ def bmmWTR(W, R):
 
 
 def RRT(R):
-    R = np.asarray(R)
-    n = R.shape[0]
-
-    RRT = np.zeros((n, n, 3, 3))
-
-    for i in range(n):
-        for j in range(n):
-            RRT[i, j] = R[j] @ R[i].T
-
-    return RRT
+    return R[None] @ R[:, None].transpose(0, 1, 3, 2)
